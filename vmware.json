@@ -1,0 +1,38 @@
+{
+  "builders": [
+    {
+      "boot_command": [
+        "y<return><wait>",
+        "dhcp<return><wait>",
+        "c1t0d0<return><wait>",
+        "root<return><wait>",
+        "root<return><wait>",
+        "y<return><wait>",
+        "n<return><wait>",
+        "y<return><wait>"
+      ],
+      "boot_wait": "30s",
+      "guest_os_type": "solaris10-64",
+      "iso_checksum": "3b38b89fccd52cc51c57c79ec30df00c",
+      "iso_checksum_type": "md5",
+      "iso_url": "/Users/kevin/Downloads/smartos-20150108T111855Z.iso",
+      "shutdown_command": "poweroff",
+      "ssh_password": "root",
+      "ssh_username": "root",
+      "type": "vmware-iso",
+      "vmx_data": {
+        "memsize": "2048"
+      }
+    }
+  ],
+  "post-processors": null,
+  "provisioners": [
+    {
+      "inline": [
+        ""
+      ],
+      "type": "shell"
+    }
+  ]
+}
+
