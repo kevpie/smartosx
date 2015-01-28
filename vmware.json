@@ -1,35 +1,47 @@
 {
   "builders": [
     {
+      "type": "vmware-vmx",
+      "vm_name": "SmartOS",
+      "source_path": "/opt/smartosx/vm_cache/SmartOS.vmwarevm/SmartOS.vmx",
+      "output_directory": "/opt/smartosx/SmartOS.vmwarevm/",
+      "headless": true,
       "boot_command": [
+        "<return><wait10>",
         "y<return><wait>",
-        "dhcp<return><wait>",
-        "c1t0d0<return><wait>",
+        "172.16.109.99<return><wait>",
+        "255.255.255.0<return><wait>",
+        "172.16.109.2<return><wait>",
+        "8.8.8.8<return><wait>",
+        "8.8.4.4<return><wait>",
+        "domain<return><wait>",
+        "searchdomain<return><wait>",
+        "c0t1d0<return><wait>",
         "root<return><wait>",
         "root<return><wait>",
         "y<return><wait>",
         "n<return><wait>",
         "y<return><wait>"
       ],
-      "boot_wait": "30s",
-      "guest_os_type": "solaris10-64",
-      "iso_checksum": "3b38b89fccd52cc51c57c79ec30df00c",
-      "iso_checksum_type": "md5",
-      "iso_url": "/Users/kevin/Downloads/smartos-20150108T111855Z.iso",
+      "boot_wait": "5s",
       "shutdown_command": "poweroff",
+      "shutdown_timeout": "15s",
       "ssh_password": "root",
       "ssh_username": "root",
-      "type": "vmware-iso",
-      "vmx_data": {
-        "memsize": "2048"
-      }
+      "ssh_host": "172.16.109.99"
     }
   ],
   "post-processors": null,
   "provisioners": [
     {
       "inline": [
-        ""
+        "echo install pkgsrc 2014Q3",
+        "cd /",
+        "curl -k http://pkgsrc.joyent.com/packages/SmartOS/bootstrap/bootstrap-2014Q3-x86_64.tar.gz | gzcat | tar -xf -",
+        "PATH=/opt/local/sbin:/opt/local/bin:$PATH",
+        "pkg_admin rebuild",
+        "pkgin -y up",
+        "pkgin -y in salt"
       ],
       "type": "shell"
     }
