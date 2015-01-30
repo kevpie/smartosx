@@ -1,12 +1,6 @@
 # smartosx
 Salt Packer SmartOS OSX VMWare
 
-Salt OSX
-
-```bash
-sudo easy_install-2.7 pip
-sudo pip install salt=2014.7.1
-```
 
 lnstall brew
 ```bash
@@ -14,10 +8,19 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew doctor
 ```
 
+Salt OSX
+
+```bash
+brew install saltstack
+```
+
 Install Cask
 ```bash
 brew install caskroom/cask/brew-cask
 ```
+
+
+
 Tap additional older version
 ```bash
 brew tap caskroom/versions
