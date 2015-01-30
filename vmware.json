@@ -14,8 +14,8 @@
         "172.16.109.2<return><wait>",
         "8.8.8.8<return><wait>",
         "8.8.4.4<return><wait>",
-        "domain<return><wait>",
-        "searchdomain<return><wait>",
+        "gz.local<return><wait>",
+        "local<return><wait>",
         "c0t1d0<return><wait>",
         "root<return><wait>",
         "root<return><wait>",
@@ -35,10 +35,13 @@
   "provisioners": [
     {
       "inline": [
+        "echo 'export PATH=/opt/local/sbin:/opt/local/bin:$PATH' >> /root/.bashrc",
+        "echo 172.16.109.1 osx.local salt >> /etc/hosts",
+        "hostname gz.local",
         "echo install pkgsrc 2014Q3",
         "cd /",
         "curl -k http://pkgsrc.joyent.com/packages/SmartOS/bootstrap/bootstrap-2014Q3-x86_64.tar.gz | gzcat | tar -xf -",
-        "PATH=/opt/local/sbin:/opt/local/bin:$PATH",
+        "export PATH=/opt/local/sbin:/opt/local/bin:$PATH",
         "pkg_admin rebuild",
         "pkgin -y up",
         "pkgin -y in salt"

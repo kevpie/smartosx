@@ -1,7 +1,7 @@
-file_client: local
-
-
+root_dir: /opt/smartosx
 
 file_roots:
   base:
     - /opt/smartosx/srv_salt
+
+state_top: top.sls
