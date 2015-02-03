@@ -40,20 +40,29 @@ packer build vmware.json
 ```
 
 ## Getting salt master+minion operational
+* get salt master running on osx.local
+```bash
+$ sudo ln -s /opt/smartosx/minion /etc/salt/minion
+$ sudo ln -s /opt/smartosx/master /etc/salt/master
+```
 * get salt minion running on gz.local
 ```bash
 $ ssh root@gz.local
-$ pkgin in git-base
-// todo: install dependencies from salt bootstrap
+$ pkgin -y install zeromq py27-m2crypto py27-crypto py27-msgpack py27-yaml py27-jinja2 py27-zmq py27-requests git-base
 $ git clone git://github.com/kevpie/salt.git /opt/salt
 $ cd /opt/salt
 $ git checkout smartos_vmadm_optional_args
 $ ./setup.py build
 $ ./setup.py install
 ```
-* get salt master running on osx.local
+* get salt minion running on www.local
 ```bash
-$ sudo ln -s /opt/smartosx/minion /etc/salt/minion
-$ sudo ln -s /opt/smartosx/master /etc/salt/master
+$ ssh root@www.local
+$ pkgin -y install zeromq py27-m2crypto py27-crypto py27-msgpack py27-yaml py27-jinja2 py27-zmq py27-requests git-base
+$ git clone git://github.com/kevpie/salt.git /opt/salt
+$ cd /opt/salt
+$ git checkout smartos_vmadm_optional_args
+$ ./setup.py build
+$ ./setup.py install
 ```
 
