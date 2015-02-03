@@ -5,3 +5,4 @@
     - user: root
     - group: wheel
     - mode: 644
+    - makedirs: True
