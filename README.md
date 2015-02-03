@@ -38,3 +38,13 @@ Run packer to create vm
 ```bash
 packer build vmware.json
 ```
+
+
+Getting salt master+minion operational
+* get salt minion running on gz.local
+* get salt master running on osx.local
+```bash
+$ sudo ln -s /opt/smartosx/minion /etc/salt/minion
+$ sudo ln -s /opt/smartosx/master /etc/salt/master
+```
+
