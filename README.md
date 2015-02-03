@@ -1,6 +1,10 @@
 # smartosx
 Salt Packer SmartOS OSX VMWare
 
+## Install xcode command line tools
+```bash
+xcode-select --install
+```
 
 ## Install brew
 ```bash
