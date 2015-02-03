@@ -11,10 +11,14 @@ www.local:
         max_physical_memory: 2048
         quota: 10
         nic_tag: admin
-        ip: 172.16.109.101
+        ip: 172.16.109.100
         netmask: 255.255.255.0
         gateway: 172.16.109.2
         resolvers: 8.8.8.8 8.8.4.4
         maintain_resolvers: true
     - unless: ls /zones/ab9312fc-8763-459e-9f65-927642c5388e
 
+/zones/ab9312fc-8763-459e-9f65-927642c5388e/root/etc/hosts:
+  file.append:
+    - text:
+      - 172.16.109.1 osx.local salt
