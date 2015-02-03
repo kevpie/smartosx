@@ -2,37 +2,37 @@
 Salt Packer SmartOS OSX VMWare
 
 
-lnstall brew
+## Install brew
 ```bash
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew doctor
 ```
 
-Salt OSX
+## Salt OSX
 
 ```bash
 brew install saltstack
 ```
 
-Install Cask
+## Install Cask
 ```bash
 brew install caskroom/cask/brew-cask
 ```
 
 
 
-Tap additional older version
+## Tap additional older version
 ```bash
 brew tap caskroom/versions
 ```
-Install Cask Applications
+## Install Cask Applications
 ```bash
 brew cask install vmware-fusion6
 brew cask install packer
 ```
 
 
-Run packer to create vm
+## Run packer to create vm
 - install pkgsrc
 - install salt
 ```bash
@@ -40,7 +40,7 @@ packer build vmware.json
 ```
 
 
-Getting salt master+minion operational
+## Getting salt master+minion operational
 * get salt minion running on gz.local
 * get salt master running on osx.local
 ```bash
