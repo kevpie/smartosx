@@ -47,6 +47,7 @@ $ pkgin in git-base
 // todo: install dependencies from salt bootstrap
 $ git clone git://github.com/kevpie/salt.git /opt/salt
 $ cd /opt/salt
+$ git checkout smartos_vmadm_optional_args
 $ ./setup.py build
 $ ./setup.py install
 ```
