@@ -47,22 +47,23 @@ $ sudo ln -s /opt/smartosx/master /etc/salt/master
 ```
 * get salt minion running on gz.local
 ```bash
-$ ssh root@gz.local
-$ pkgin -y install zeromq py27-m2crypto py27-crypto py27-msgpack py27-yaml py27-jinja2 py27-zmq py27-requests git-base
-$ git clone git://github.com/kevpie/salt.git /opt/salt
-$ cd /opt/salt
-$ git checkout smartos_vmadm_optional_args
-$ ./setup.py build
-$ ./setup.py install
+ssh root@gz.local
+pkgin -y install zeromq py27-m2crypto py27-crypto py27-msgpack py27-yaml py27-jinja2 py27-zmq py27-requests git-base
+git clone git://github.com/kevpie/salt.git /opt/salt
+cd /opt/salt
+git checkout smartos_vmadm_optional_args
+./setup.py build
+./setup.py install
+salt-minion -l info
 ```
 * get salt minion running on www.local
 ```bash
-$ ssh root@www.local
-$ pkgin -y install zeromq py27-m2crypto py27-crypto py27-msgpack py27-yaml py27-jinja2 py27-zmq py27-requests git-base
-$ git clone git://github.com/kevpie/salt.git /opt/salt
-$ cd /opt/salt
-$ git checkout smartos_vmadm_optional_args
-$ ./setup.py build
-$ ./setup.py install
+ssh root@www.local
+pkgin -y install zeromq py27-m2crypto py27-crypto py27-msgpack py27-yaml py27-jinja2 py27-zmq py27-requests git-base
+git clone git://github.com/kevpie/salt.git /opt/salt
+cd /opt/salt
+git checkout smartos_vmadm_optional_args
+./setup.py build
+./setup.py install
+salt-minion -l info
 ```
-
