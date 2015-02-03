@@ -5,7 +5,7 @@
       "vm_name": "SmartOS",
       "source_path": "/opt/smartosx/vm_cache/SmartOS.vmwarevm/SmartOS.vmx",
       "output_directory": "/opt/smartosx/SmartOS.vmwarevm/",
-      "headless": true,
+      "headless": false,
       "boot_command": [
         "<return><wait10>",
         "y<return><wait>",

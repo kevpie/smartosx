@@ -5,7 +5,7 @@ download-smartos-vmwarevm:
     - source_hash: md5=a0c857c7b53be5f066ae7a1652406fd4
     - archive_format: tar
     - uid: 501
-    - gid: 80
+    - gid: 20
     - if_missing: /opt/smartosx/vm_cache/SmartOS.vmwarevm/
 
 smartos-install-os:
