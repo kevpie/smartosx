@@ -9,14 +9,13 @@ nfsd update:
     - user: root
     - group: wheel
 
-/opt/thi/trunk:
+create-treadmill-folders:
   file.directory:
-    - uid: 501
-    - gid: 20
+    - user: kevin
+    - group: staff
     - mode: 755
-
-/opt/thi/shared:
-  file.directory:
-    - uid: 501
-    - gid: 20
-    - mode: 755
+    - names:
+       - /opt/thi/treadmill
+       - /opt/thi/treadmill/current
+       - /opt/thi/treadmill/shared
+#       - /opt/thi/treadmill/shared/log

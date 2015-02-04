@@ -1,2 +1,2 @@
-/opt/thi/shared -network 172.16.109 -mask 255.255.255.0 -maproot 501:20
-/opt/thi/trunk -network 172.16.109 -mask 255.255.255.0 -maproot 501:20
+/opt/thi/treadmill/shared -network 172.16.109 -mask 255.255.255.0 -maproot 501:20
+/opt/thi/treadmill/current -network 172.16.109 -mask 255.255.255.0 -maproot 501:20
