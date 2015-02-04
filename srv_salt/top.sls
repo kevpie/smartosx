@@ -6,3 +6,6 @@ base:
     - workstation
     - workstation.vmnet
     - workstation.nfs_share
+  'www.*':
+    - thi_user
+    - thi

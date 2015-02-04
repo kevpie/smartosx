@@ -3,5 +3,6 @@ root_dir: /opt/smartosx
 file_roots:
   base:
     - /opt/smartosx/srv_salt
+    - /opt/salt/srv/salt
 
 state_top: top.sls

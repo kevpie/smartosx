@@ -10,6 +10,9 @@ postgresql:
   service.running:
     - enables: True
 
+py27-readline:
+  pkg.installed
+
 skytools:
   pkg.installed
 
@@ -18,3 +21,10 @@ thi:
     - superuser: True
     - createdb: True
     - createroles: True
+
+py27-pip:
+  pkg.installed
+
+pgxnclient:
+  pip.installed
+
