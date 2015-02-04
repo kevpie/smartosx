@@ -1,7 +1,7 @@
-file_client: local
+#file_client: local
 
 
 
-file_roots:
-  base:
-    - /opt/smartosx/srv_salt
+#file_roots:
+#  base:
+#    - /opt/smartosx/srv_salt
