@@ -76,5 +76,5 @@ salt-minion -l info
 ```bash
 sudo mkdir -p /opt/salt
 sudo chown 501:20 /opt/salt
-sudo git clone https://github.com/{opt_salt_repo}.git /opt/salt/
+git clone https://github.com/{opt_salt_repo}.git /opt/salt/
 ```
