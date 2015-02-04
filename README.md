@@ -72,9 +72,6 @@ git checkout smartos_vmadm_optional_args
 salt-minion -l info
 ```
 
-
-## !! Note: We've checked out our opt_salt stuff AND the above into `/opt/salt`
-
 ## Get opts salt set up in osx
 ```bash
 sudo mkdir -p /opt/salt
