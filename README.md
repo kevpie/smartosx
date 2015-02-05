@@ -46,8 +46,12 @@ packer build vmware.json
 ## Getting salt master+minion operational
 * get salt master running on osx.local
 ```bash
+sudo mkdir /etc/salt/
 sudo ln -s /opt/smartosx/minion /etc/salt/minion
 sudo ln -s /opt/smartosx/master /etc/salt/master
+
+sudo hostname osx.local
+
 ```
 * get salt minion running inside gz.local
 ```bash
