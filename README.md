@@ -51,6 +51,9 @@ sudo ln -s /opt/smartosx/minion /etc/salt/minion
 sudo ln -s /opt/smartosx/master /etc/salt/master
 
 sudo hostname osx.local
+sudo cp /opt/smartosx/srv_salt/workstation/vmnet.conf /Library/Preferences/VMware\ Fusion/networking
+
+note: minion config needs to be empty when not using --local
 
 ```
 * get salt minion running inside gz.local
